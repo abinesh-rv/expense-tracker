@@ -37,7 +37,7 @@ function Home() {
         const [editTrans,seteditTrans] = useState("empty")
     
         async function fetchTransactions(){
-            const res = await fetch(`${process.env.API_URL}/transactions/${currentUser._id}`)
+            const res = await fetch(`${process.env.REACT_APP_API_URL}/transactions/${currentUser._id}`)
             const {data} =await res.json()
             settransactions(data)
         }

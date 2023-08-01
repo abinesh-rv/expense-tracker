@@ -10,7 +10,7 @@ function TransForm({Form,fetchTransactions,setForm,editTrans,initialForm,setedit
     },[editTrans])
 
     const submit = async() => {
-      const res = await fetch(`${process.env.API_URL}/transactions/${currentUser._id}`,{
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/transactions/${currentUser._id}`,{
         method:"POST",
         body:JSON.stringify(Form),
         headers:{
@@ -21,7 +21,7 @@ function TransForm({Form,fetchTransactions,setForm,editTrans,initialForm,setedit
     }
 
     const update = async(id) => {
-      const res = await fetch(`${process.env.API_URL}/transactions/${currentUser._id}/${id}` ,{
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/transactions/${currentUser._id}/${id}` ,{
         method:"PATCH",
         body:JSON.stringify(Form),
         headers:{

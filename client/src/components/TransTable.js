@@ -8,7 +8,7 @@ function TransTable({transactions,fetchTransactions,seteditTrans}) {
 
     if(!window.confirm("Are you sure want to delete")) return;
 
-    const res = await fetch(`${process.env.API_URL}/transactions/${id}`,{
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/transactions/${id}`,{
       method:"DELETE",
     })
     if(res.ok){

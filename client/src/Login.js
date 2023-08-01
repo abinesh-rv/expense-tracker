@@ -43,7 +43,7 @@ function Login() {
     }
 
     if(handleValidation()){ 
-      const res = await fetch(`${process.env.API_URL}/auth/Login`,{
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/auth/Login`,{
         method:"POST",
         headers:{"Content-Type" : "application/json"},
         body:JSON.stringify({
