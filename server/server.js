@@ -12,6 +12,8 @@ dotenv.config()
 
 const app = express()
 
+const PORT = process.env.PORT || 5000
+
 app.use(cors())
 app.use(bodyparser.urlencoded({
     extended: true
@@ -23,4 +25,4 @@ app.use("/auth",UserApi)
 
 await connect()
 
-app.listen(5500,() => console.log("listening on http://localhost:5500"))
+app.listen(PORT)
