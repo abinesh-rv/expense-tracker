@@ -6,9 +6,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './Home'
 import Login from "./Login"
 import Register from './Register'
-import dotenv from "dotenv"
 
-dotenv.config()
 
 const router = createBrowserRouter([{
     path:"/",
