@@ -51,7 +51,7 @@ function Home() {
   return (
     <div>
         <Navbar/>
-        <div className="text-3xl ml-10 my-10">Welcome <span className='capitalize text-cyan-400'>{currentUser.username}</span>,</div>
+        <div className="text-3xl text-center md:text-left ml-10 my-10">Welcome <span className='capitalize text-cyan-400'>{currentUser.username}</span>,</div>
         <TransForm Form={Form} fetchTransactions={fetchTransactions} initialForm={initialForm} setForm={setForm} currentUser ={currentUser}  editTrans={editTrans} seteditTrans={seteditTrans}/>
         <TransTable transactions={transactions} fetchTransactions={fetchTransactions} seteditTrans={seteditTrans}/>
     </div>

@@ -22,7 +22,6 @@ app.use(bodyparser.json())
 app.use("/transactions",TransactionApi)
 app.use("/auth",UserApi)
 
-
 await connect()
 
 app.listen(PORT)

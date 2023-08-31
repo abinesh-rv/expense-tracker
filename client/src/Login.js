@@ -87,24 +87,28 @@ function Login() {
   }
 
   return (
-    <div>
-      <div className='w-[500px] mx-auto  rounded-md mt-[200px] py-10 bg-cyan-700'>
-      <div className="flex items-center justify-center mb-4  text-[2.1rem]">
-        <TbMoneybag size="40 "/>
-        <div className='font-thin'>RV-Expense</div>
-      </div>
-      <form className='flex flex-col mx-24 gap-6 text-gray-300' onSubmit={handleSubmit}>
-       <input type="text" name='email' required placeholder='email' className='rounded-md px-4 py-2 text-slate-800  border-2 ' onChange={(e) =>handleChange(e)}/>
-       <div className='rounded-md px-4 py-2 text-slate-800 bg-white border-2  flex justify-between items-center hover:ring-black hover:ring-1 hover:border-transparent'>
-       <input type={showPass ? "text" : "password"} name='password' className=' focus:outline-none' required placeholder='password'  onChange={(e) =>handleChange(e)}/>
-       <span className='text-cyan-700 cursor-pointer hover:text-black' onClick={(e) => handleShow(e)}>{showPass ? <LuEyeOff size={20}/> : <LuEye size={20}/>}</span>
-       </div>
-       <button type="submit" className='uppercase text-lg bg-white rounded-md py-1 tracking-wide text-black hover:bg-black hover:text-white transition ease-in-out duration-300' >login</button>
-      </form>
-      <div className='text-center mt-5'>Don't have an account? <Link to="/register" className='uppercase text-lg tracking-wide hover:text-dark  transition ease-in-out duration-300'> register</Link></div>
-    </div>
-     <Toaster/>
-    </div>
+
+
+<div className='h-[100vh] '>
+<div className='pt-[100px] px-5'>
+  <div className='md:w-[500px]  mx-auto  rounded-md  py-10 bg-cyan-700'>
+  <div className="flex items-center justify-center mb-4  text-[2.1rem]">
+  <TbMoneybag size="40 "/>
+   <div className='font-thin'>RV-Expense</div>
+  </div>
+  <form className='flex flex-col md:mx-24 mx-12 gap-6 text-gray-300' onSubmit={handleSubmit}>
+   <input type="text" name='email' required placeholder='email' className='rounded-md px-4 py-2 text-slate-800  border-2 ' onChange={(e) =>handleChange(e)}/>
+   <div className='rounded-md px-4 py-2 text-slate-800 bg-white border-2  flex justify-between items-center hover:ring-black hover:ring-1 hover:border-transparent'>
+   <input type={showPass ? "text" : "password"} name='password' className=' focus:outline-none' required placeholder='password'  onChange={(e) =>handleChange(e)}/>
+   <span className='text-cyan-700 cursor-pointer hover:text-black' onClick={(e) => handleShow(e)}>{showPass ? <LuEyeOff size={20}/> : <LuEye size={20}/>}</span>
+   </div>
+   <button type="submit" className='uppercase text-lg bg-white rounded-md py-1 tracking-wide text-black hover:bg-black hover:text-white transition ease-in-out duration-300' >login</button>
+  </form>
+  <div className='text-center mt-5'>Don't have an account? <Link to="/register" className='uppercase text-lg tracking-wide hover:text-dark  transition ease-in-out duration-300'> register</Link></div>
+</div>
+ <Toaster/>
+</div>
+</div>
   )
 }
 
